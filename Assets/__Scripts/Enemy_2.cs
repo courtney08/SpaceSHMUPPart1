@@ -9,6 +9,7 @@ public class Enemy_2 : Enemy
 
     [Tooltip("Determines how much the Sine wave will ease the interpolation")]
     public float sinEccentricity = 0.6f;
+    public AnimationCurve rotCurve;
 
     [Header("Enemy_2 Private Fields")]
     [SerializeField] private float birthTime;
@@ -41,9 +42,13 @@ public class Enemy_2 : Enemy
             return;
         }
 
+        float shipRot = rotCurve.Evaluate(u) * 360;
+        if(p0.x > p1.x) shipRot = -shipRot;
+        transform.rotation = Quaternion.Euler(0, shipRot, 0);
+        
         u = u + sinEccentricity*(Mathf.Sin(u*Mathf.PI*2));
 
         pos = (1-u)*p0 + u*p1;
     }
-    
+
 }
