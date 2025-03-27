@@ -530,6 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb22c44358dbc14c80103f78e5c1787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boundsType: 1
+  radius: 4
   camWidth: 0
   camHeight: 0
 --- !u!1 &1912237398
