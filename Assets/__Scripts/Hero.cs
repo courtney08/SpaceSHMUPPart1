@@ -79,44 +79,44 @@ public class Hero : MonoBehaviour
         lastTriggerGo = go;
 
         Enemy enemy = go.GetComponent<Enemy>();
-        PowerUp pUp = go.GetComponent<PowerUp>();
+        // PowerUp pUp = go.GetComponent<PowerUp>();
         if(enemy != null){
             shieldLevel--;
             Destroy(go);
         }
-        else if(pUp != null){
-            AbsorbPowerUp(pUp);
-        }
+        // else if(pUp != null){
+        //     AbsorbPowerUp(pUp);
+        // }
         else{
             Debug.LogWarning("Shield trigger hit by non-Enemy: " +go.name);
         }
     }
 
-    public void AbsorbPowerUp(PowerUp pUp){
-        Debug.Log("Absorbed PowerUp: " + pUp.type);
+    // public void AbsorbPowerUp(PowerUp pUp){
+    //     Debug.Log("Absorbed PowerUp: " + pUp.type);
 
-        switch(pUp.type){
-        case eWeaponType.shield:
-            shieldLevel++;
-            break;
+    //     switch(pUp.type){
+    //     case eWeaponType.shield:
+    //         shieldLevel++;
+    //         break;
 
-        default:
-            if(pUp.type == weapons[0].type){
-                Weapon weap = GetEmptyWeaponSlot();
-                if(weap != null){
-                    weap.SetType(pUp.type);
-                }   
-            }
+    //     default:
+    //         if(pUp.type == weapons[0].type){
+    //             Weapon weap = GetEmptyWeaponSlot();
+    //             if(weap != null){
+    //                 weap.SetType(pUp.type);
+    //             }   
+    //         }
             
-            else{
-                ClearWeapons();
-                weapons[0].SetType(pUp.type);
-            }
+    //         else{
+    //             ClearWeapons();
+    //             weapons[0].SetType(pUp.type);
+    //         }
 
-            break;
-        }
-        pUp.AbsorbedBy(this.gameObject);
-    }
+    //         break;
+    //     }
+    //     pUp.AbsorbedBy(this.gameObject);
+    // }
 
     public float shieldLevel{
         get { return( _shieldLevel ); }
