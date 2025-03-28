@@ -32,6 +32,8 @@ public class Hero : MonoBehaviour
             Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
         }
         //fireEvent += TempFire;
+        ClearWeapons();
+        weapons[0].SetType(eWeaponType.blaster);
     }
 
     // Update is called once per frame
@@ -110,7 +112,7 @@ public class Hero : MonoBehaviour
                 ClearWeapons();
                 weapons[0].SetType(pUp.type);
             }
-            
+
             break;
         }
         pUp.AbsorbedBy(this.gameObject);
