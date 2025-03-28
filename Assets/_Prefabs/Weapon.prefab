@@ -76,9 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c718ec4efa2563b468cb727c080a1744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 0
+  _type: 1
   def:
-    type: 0
+    type: 1
     letter: 
     powerUpColor: {r: 1, g: 1, b: 1, a: 1}
     weaponModelPrefab: {fileID: 0}

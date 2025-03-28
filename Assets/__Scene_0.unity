@@ -1193,6 +1193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6159091297414447598, guid: 7b393b009161cb84d8cb48bf92d2da96, type: 3}
+      propertyPath: _type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7725947824137674801, guid: 7b393b009161cb84d8cb48bf92d2da96, type: 3}
       propertyPath: m_Name
       value: PowerUp
