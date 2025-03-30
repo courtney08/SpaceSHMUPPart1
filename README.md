@@ -1,2 +1,2 @@
-# SpaceSHMUPPart1
- Space SHMUP Part 1
+# SpaceSHMUP Part 1 and Part 2 Completed
+## Added space techno like music to the game
